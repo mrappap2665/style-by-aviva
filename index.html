@@ -1,8 +1,8 @@
-
+ 
 <!DOCTYPE html>
-<!-- saved from url=(0056)file:///C:/Users/michr/Downloads/brady-electric-dfr.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brady Electric — Daily Field Report</title>
 <style>
@@ -446,7 +446,7 @@
   <div class="section">
     <div class="section-header alt">
       <div class="section-num">2</div>
-      <div class="section-title">Crew &amp; Hours Worked</div>
+      <div class="section-title">Crew & Hours Worked</div>
     </div>
     <div class="section-body">
       <p class="field-note" style="margin-bottom:10px;">List each person individually — name, role, and hours on site today.</p>
@@ -504,7 +504,7 @@
     </div>
     <div class="section-body">
       <label>Describe work completed <span class="req">*</span></label>
-      <textarea id="workCompleted" placeholder="Be specific — not just &#39;electrical work.&#39; e.g. Rough-in on 2nd floor east wing rooms 201–206, pulled service entrance wire, installed 40 boxes." rows="4"></textarea>
+      <textarea id="workCompleted" placeholder="Be specific — not just 'electrical work.' e.g. Rough-in on 2nd floor east wing rooms 201–206, pulled service entrance wire, installed 40 boxes." rows="4"></textarea>
       <label style="margin-top:14px;">Work Planned for Tomorrow</label>
       <textarea id="workTomorrow" placeholder="e.g. Continue rough-in rooms 207–212, confirm panel location with GC." rows="3"></textarea>
     </div>
@@ -560,7 +560,7 @@
   <div class="section">
     <div class="section-header alt">
       <div class="section-num">6</div>
-      <div class="section-title">Issues, Delays &amp; RFIs</div>
+      <div class="section-title">Issues, Delays & RFIs</div>
     </div>
     <div class="section-body">
       <label>Any delays, conflicts, access issues, or RFI needs?</label>
@@ -717,78 +717,91 @@
   function buildEmailBody() {
     const val = id => (document.getElementById(id).value.trim() || '—');
     const crew = getCrewData();
-    const crewLines = crew.map(c => `  • ${c.name} | ${c.role || 'N/A'} | ${c.hours || '?'} hrs`).join('\n');
     const totalHours = crew.reduce((sum, c) => sum + (parseFloat(c.hours) || 0), 0);
 
     const scopeActive = document.getElementById('scopeFields').classList.contains('visible');
     const scopeSection = scopeActive
-      ? `⚠️ YES — Extra Work Documented
-  Who: ${val('scopeWho')}
-  Type: ${document.getElementById('scopeType').value || '—'}
-  Details: ${val('scopeDesc')}`
-      : '✓ No scope changes today';
+      ? `YES — Extra Work Documented%0D%0A  Who: ${val('scopeWho')}%0D%0A  Type: ${document.getElementById('scopeType').value || '—'}%0D%0A  Details: ${val('scopeDesc')}`
+      : 'No scope changes today';
 
     const date = new Date(document.getElementById('reportDate').value + 'T12:00:00');
     const dateStr = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
-    return `BRADY ELECTRIC — DAILY FIELD REPORT
-${'='.repeat(50)}
+    const line = '________________________________________________';
 
-JOB: ${val('jobName')}    JOB #: ${val('jobNumber')}
-DATE: ${dateStr}
-FOREMAN: ${val('foremanName')}
-WEATHER: ${getWeather()}${val('weatherNotes') !== '—' ? '\nWEATHER NOTES: ' + val('weatherNotes') : ''}
+    const crewLines = crew.map(c =>
+      `  ${c.name}  |  ${c.role || 'N/A'}  |  ${c.hours || '?'} hrs`
+    ).join('%0D%0A');
 
-${'─'.repeat(50)}
-CREW & HOURS (Total: ${totalHours} hrs)
-${'─'.repeat(50)}
-${crewLines}
+    const parts = [
+      `BRADY ELECTRIC -- DAILY FIELD REPORT`,
+      line,
+      ``,
+      `JOB NAME:    ${val('jobName')}`,
+      `JOB NUMBER:  ${val('jobNumber')}`,
+      `DATE:        ${dateStr}`,
+      `FOREMAN:     ${val('foremanName')}`,
+      `WEATHER:     ${getWeather()}`,
+      val('weatherNotes') !== '—' ? `WEATHER NOTES: ${val('weatherNotes')}` : null,
+      ``,
+      line,
+      `CREW & HOURS  (Total: ${totalHours} hrs)`,
+      line,
+      crewLines,
+      ``,
+      line,
+      `WORK COMPLETED TODAY`,
+      line,
+      val('workCompleted'),
+      ``,
+      `WORK PLANNED FOR TOMORROW:`,
+      val('workTomorrow'),
+      ``,
+      line,
+      `MATERIALS USED TODAY`,
+      line,
+      val('materialsUsed'),
+      ``,
+      `MATERIALS NEEDED / TO BE ORDERED:`,
+      val('materialsNeeded'),
+      ``,
+      line,
+      `SCOPE CHANGES / EXTRA WORK`,
+      line,
+      scopeSection,
+      ``,
+      line,
+      `ISSUES, DELAYS & RFIs`,
+      line,
+      val('issues'),
+      ``,
+      `SUBCONTRACTOR NOTES:`,
+      val('subNotes'),
+      ``,
+      line,
+      `ADDITIONAL NOTES`,
+      line,
+      val('additionalNotes'),
+      ``,
+      line,
+      `Submitted via Brady Electric DFR`,
+      new Date().toLocaleString(),
+      line,
+    ].filter(p => p !== null);
 
-${'─'.repeat(50)}
-WORK COMPLETED TODAY
-${'─'.repeat(50)}
-${val('workCompleted')}
-
-WORK PLANNED FOR TOMORROW:
-${val('workTomorrow')}
-
-${'─'.repeat(50)}
-MATERIALS
-${'─'.repeat(50)}
-USED TODAY:
-${val('materialsUsed')}
-
-TO BE ORDERED / NEEDED:
-${val('materialsNeeded')}
-
-${'─'.repeat(50)}
-SCOPE CHANGES / EXTRA WORK
-${'─'.repeat(50)}
-${scopeSection}
-
-${'─'.repeat(50)}
-ISSUES, DELAYS & RFIs
-${'─'.repeat(50)}
-${val('issues')}
-
-SUBCONTRACTOR NOTES:
-${val('subNotes')}
-
-${'─'.repeat(50)}
-ADDITIONAL NOTES
-${'─'.repeat(50)}
-${val('additionalNotes')}
-
-${'='.repeat(50)}
-Submitted via Brady Electric DFR — ${new Date().toLocaleString()}`;
+    return parts.join('%0D%0A');
+  }
   }
 
   // Copy report to clipboard (fallback)
   function copyReport() {
     if (!validate()) return;
-    const text = buildEmailBody();
-    const subject = `DFR — ${document.getElementById('jobName').value.trim()} — ${document.getElementById('reportDate').value} — ${document.getElementById('foremanName').value.trim()}`;
-    const full = `Subject: ${subject}\n\n${text}`;
+    const rawBody = buildEmailBody().replace(/%0D%0A/g, '\n');
+    const jobName = document.getElementById('jobName').value.trim();
+    const date = document.getElementById('reportDate').value;
+    const foreman = document.getElementById('foremanName').value.trim();
+    const subject = `DFR -- ${jobName} -- ${date} -- ${foreman}`;
+    const full = `Subject: ${subject}\n\n${rawBody}`;
     navigator.clipboard.writeText(full).then(() => {
       const hint = document.getElementById('copyHint');
       hint.classList.add('show');
@@ -807,15 +820,14 @@ Submitted via Brady Electric DFR — ${new Date().toLocaleString()}`;
     const date = document.getElementById('reportDate').value;
     const foreman = document.getElementById('foremanName').value.trim();
 
-    const subject = encodeURIComponent(`DFR — ${jobName} — ${date} — ${foreman}`);
-    const body = encodeURIComponent(buildEmailBody());
+    const subject = encodeURIComponent(`DFR -- ${jobName} -- ${date} -- ${foreman}`);
+    const body = buildEmailBody();
 
     // mailto opens native Mail app on iPhone — works from GitHub hosting
-    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${encodeURIComponent(recipient)}?subject=${subject}&body=${body}`;
 
     showToast('Opening email app...', 3000);
   }
 </script>
-
-
-</body></html>
+</body>
+</html>
