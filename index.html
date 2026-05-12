@@ -250,7 +250,7 @@ textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
   <div class="submit-inner">
     <div class="email-wrap">
       <span class="field-label">Send report to</span>
-      <input type="text" id="recipientEmail" value="office@bradyelectric.com" placeholder="Separate multiple addresses with a comma">
+      <input type="text" id="recipientEmail" value="shannonb@bradyelectric.com" placeholder="Separate multiple addresses with a comma">
     </div>
     <button class="copy-btn" onclick="copyReport()" title="Copy to clipboard">Copy</button>
     <button class="send-btn" onclick="submitReport()">Send Report</button>
@@ -392,7 +392,7 @@ function buildReport() {
 
 function submitReport() {
   if (!validate()) return;
-  var rawRecipient = document.getElementById('recipientEmail').value.trim() || 'office@bradyelectric.com';
+  var rawRecipient = document.getElementById('recipientEmail').value.trim() || 'shannonb@bradyelectric.com';
   // Clean up multiple addresses — split by comma or semicolon, trim, rejoin with comma
   var addresses = rawRecipient.split(/[,;]+/).map(function(a){ return a.trim(); }).filter(function(a){ return a.length > 0; });
   var recipient = addresses.join(',');
