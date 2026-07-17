@@ -3,137 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aviva Interior Design — Interior Designer &amp; Corporate Stylist</title>
-<meta name="description" content="Aviva Interior Design — thoughtful residential interiors and polished corporate styling. Spaces that feel collected, calm, and unmistakably yours.">
+<title>Aviva Interior Design — Interior Designer &amp; Corporate Stylist | New Jersey</title>
+<meta name="description" content="Aviva Interior Design — New Jersey interior designer and corporate stylist. Residential design, corporate styling, custom florals, and one-of-a-kind finishing touches. Where your vision becomes our passion.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --ink: #2b2723;
-  --ink-soft: #5c554d;
-  --cream: #faf7f2;
-  --sand: #f1eae0;
-  --taupe: #c9bcab;
-  --clay: #b07d5e;
-  --clay-deep: #966347;
-  --line: #e3dbcf;
+  --green: #1e3527;
+  --green-soft: #2c4a37;
+  --cream: #faf7f0;
+  --sand: #f0ead9;
+  --gold: #b9975b;
+  --gold-soft: #d3bc8d;
+  --ink: #26251f;
+  --ink-soft: #5d594e;
+  --line: #e2dbc9;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: 'Jost', sans-serif; font-weight: 300; background: var(--cream); color: var(--ink); line-height: 1.7; font-size: 17px; }
-h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.15; }
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.15; }
+.script { font-family: 'Great Vibes', 'Cormorant Garamond', serif; font-weight: 400; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 
 /* ---------- Nav ---------- */
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(250,247,242,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-.nav-inner { max-width: 1180px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; }
-.wordmark { font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; }
-.wordmark em { font-style: italic; color: var(--clay); }
-.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(250,247,240,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.nav-inner { max-width: 1180px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; }
+.wordmark { text-decoration: none; display: flex; align-items: center; gap: 12px; }
+.wordmark .badge { width: 46px; height: 46px; border-radius: 50%; background: var(--green); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'Great Vibes', cursive; font-size: 26px; padding-top: 2px; flex-shrink: 0; }
+.wordmark .wm-text { line-height: 1.2; }
+.wordmark .wm-name { font-family: 'Cormorant Garamond', serif; font-size: 19px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--green); }
+.wordmark .wm-tag { font-size: 10px; letter-spacing: 1.6px; color: var(--gold); font-style: italic; }
+.nav-links { display: flex; gap: 30px; list-style: none; }
 .nav-links a { text-decoration: none; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ink-soft); transition: color .2s; }
-.nav-links a:hover { color: var(--clay); }
-.nav-toggle { display: none; background: none; border: none; font-size: 26px; color: var(--ink); cursor: pointer; line-height: 1; }
+.nav-links a:hover { color: var(--gold); }
+.nav-toggle { display: none; background: none; border: none; font-size: 26px; color: var(--green); cursor: pointer; line-height: 1; }
 
 /* ---------- Hero ---------- */
-.hero { min-height: 100vh; display: flex; align-items: center; padding: 140px 24px 80px; position: relative; overflow: hidden; }
-.hero::after { content: ""; position: absolute; right: -12vw; top: 18vh; width: 46vw; height: 46vw; max-width: 640px; max-height: 640px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--sand), var(--taupe)); opacity: .55; z-index: 0; }
-.hero-inner { max-width: 1180px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
-.eyebrow { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--clay); margin-bottom: 22px; }
-.hero h1 { font-size: clamp(44px, 7.5vw, 92px); max-width: 12ch; }
-.hero h1 em { font-style: italic; color: var(--clay-deep); }
-.hero p { max-width: 46ch; margin-top: 28px; font-size: 19px; color: var(--ink-soft); }
-.hero-ctas { margin-top: 40px; display: flex; gap: 18px; flex-wrap: wrap; }
-.btn { display: inline-block; text-decoration: none; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; padding: 16px 34px; border: 1px solid var(--ink); transition: all .25s; }
-.btn-solid { background: var(--ink); color: var(--cream); }
-.btn-solid:hover { background: var(--clay-deep); border-color: var(--clay-deep); }
-.btn-ghost:hover { background: var(--ink); color: var(--cream); }
+.hero { background: var(--green); color: var(--cream); padding: 150px 24px 0; }
+.hero-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+.eyebrow { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 20px; }
+.hero h1 { font-size: clamp(40px, 6.2vw, 76px); max-width: 14ch; }
+.hero h1 .script { display: block; font-size: clamp(52px, 7.5vw, 96px); color: var(--gold-soft); margin-bottom: 4px; }
+.hero p.lede { max-width: 46ch; margin-top: 24px; font-size: 19px; color: #e8e2d2; }
+.hero-ctas { margin: 38px 0 56px; display: flex; gap: 16px; flex-wrap: wrap; }
+.btn { display: inline-block; text-decoration: none; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; padding: 16px 32px; border: 1px solid var(--gold); transition: all .25s; cursor: pointer; font-family: 'Jost', sans-serif; }
+.btn-gold { background: var(--gold); color: var(--green); }
+.btn-gold:hover { background: var(--gold-soft); border-color: var(--gold-soft); }
+.btn-ghost { color: var(--cream); border-color: rgba(250,247,240,.5); background: none; }
+.btn-ghost:hover { background: var(--cream); color: var(--green); }
+.hero-photo { align-self: end; }
+.hero-photo figure { margin: 0; border: 1px solid rgba(211,188,141,.4); border-bottom: none; padding: 14px 14px 0; }
+.hero-photo img { width: 100%; height: 520px; object-fit: cover; object-position: center; }
 
-/* ---------- Shared section shell ---------- */
+/* ---------- Shared ---------- */
 section { padding: 100px 24px; }
 .shell { max-width: 1180px; margin: 0 auto; }
-.sec-head { margin-bottom: 56px; }
-.sec-head h2 { font-size: clamp(32px, 4.5vw, 52px); }
-.sec-head h2 em { font-style: italic; color: var(--clay-deep); }
-.sec-head p { color: var(--ink-soft); max-width: 58ch; margin-top: 14px; }
+.sec-head { margin-bottom: 54px; }
+.sec-head .kicker { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.sec-head h2 { font-size: clamp(32px, 4.5vw, 52px); color: var(--green); }
+.sec-head h2 em { font-style: italic; }
+.sec-head p { color: var(--ink-soft); max-width: 60ch; margin-top: 14px; }
 
 /* ---------- About ---------- */
 .about { background: var(--sand); }
-.about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: center; }
-.portrait { aspect-ratio: 4/5; background: linear-gradient(160deg, var(--taupe), var(--clay) 130%); position: relative; display: flex; align-items: center; justify-content: center; }
-.portrait span { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: rgba(255,255,255,.85); text-align: center; padding: 0 30px; }
-.about-copy h2 { font-size: clamp(30px, 4vw, 46px); margin-bottom: 22px; }
-.about-copy p { color: var(--ink-soft); margin-bottom: 18px; }
-.about-copy .sig { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px; color: var(--clay-deep); margin-top: 10px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 60px; align-items: center; }
+.about-photo { position: relative; }
+.about-photo img { width: 100%; aspect-ratio: 4/4.6; object-fit: cover; }
+.about-photo::after { content: ""; position: absolute; inset: 14px; border: 1px solid rgba(250,247,240,.65); pointer-events: none; }
+.about-copy h2 { font-size: clamp(30px, 4vw, 46px); color: var(--green); margin-bottom: 20px; }
+.about-copy h2 em { font-style: italic; }
+.about-copy p { color: var(--ink-soft); margin-bottom: 16px; }
+.about-copy .sig { font-family: 'Great Vibes', cursive; font-size: 40px; color: var(--gold); margin-top: 14px; }
 
 /* ---------- Services ---------- */
-.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.svc { border: 1px solid var(--line); background: #fff; padding: 44px 34px; transition: transform .25s, box-shadow .25s; }
-.svc:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(43,39,35,.08); }
-.svc .num { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--clay); }
-.svc h3 { font-size: 27px; margin: 14px 0 14px; }
-.svc p { color: var(--ink-soft); font-size: 16px; }
-.svc ul { list-style: none; margin-top: 18px; }
-.svc li { font-size: 14px; color: var(--ink-soft); padding: 8px 0; border-top: 1px solid var(--line); letter-spacing: .5px; }
+.svc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.svc { border: 1px solid var(--line); background: #fff; padding: 38px 28px; transition: transform .25s, box-shadow .25s; }
+.svc:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(30,53,39,.1); }
+.svc .num { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: var(--gold); }
+.svc h3 { font-size: 24px; margin: 12px 0; color: var(--green); }
+.svc p { color: var(--ink-soft); font-size: 15px; }
+.svc ul { list-style: none; margin-top: 16px; }
+.svc li { font-size: 13.5px; color: var(--ink-soft); padding: 7px 0; border-top: 1px solid var(--line); letter-spacing: .4px; }
 
 /* ---------- Portfolio ---------- */
-.work { background: var(--sand); }
-.work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.tile { aspect-ratio: 4/5; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 24px; text-decoration: none; }
-.tile:nth-child(1) { background: linear-gradient(150deg, #d8cbb8, #a98f74); }
-.tile:nth-child(2) { background: linear-gradient(150deg, #cfc4bb, #8f7c6d); }
-.tile:nth-child(3) { background: linear-gradient(150deg, #e0d4c2, #b07d5e); }
-.tile:nth-child(4) { background: linear-gradient(150deg, #c9c2b2, #7d7463); }
-.tile:nth-child(5) { background: linear-gradient(150deg, #ddd2c6, #966347); }
-.tile:nth-child(6) { background: linear-gradient(150deg, #d4c9c0, #6b5d52); }
-.tile figcaption { color: rgba(255,255,255,.92); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
-.tile::before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,.35); pointer-events: none; }
-.work-cta { text-align: center; margin-top: 48px; }
+.work { background: var(--green); }
+.work .sec-head h2 { color: var(--cream); }
+.work .sec-head p { color: #cfc9b8; }
+.work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.tile { position: relative; overflow: hidden; text-decoration: none; display: block; }
+.tile img { width: 100%; aspect-ratio: 4/4.4; object-fit: cover; transition: transform .5s; }
+.tile:hover img { transform: scale(1.04); }
+.tile figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 44px 18px 14px; background: linear-gradient(transparent, rgba(30,53,39,.82)); color: var(--cream); font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; }
+.work-cta { text-align: center; margin-top: 44px; }
+
+/* ---------- Artisan ---------- */
+.artisan { background: var(--sand); }
+.art-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.art-grid figure { margin: 0; background: #fff; border: 1px solid var(--line); padding: 12px 12px 16px; }
+.art-grid img { width: 100%; aspect-ratio: 4/4.6; object-fit: cover; }
+.art-grid figcaption { font-size: 12.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-soft); margin-top: 12px; text-align: center; }
 
 /* ---------- Process ---------- */
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; counter-reset: step; }
-.step { border-top: 2px solid var(--clay); padding-top: 22px; }
-.step h3 { font-size: 23px; margin-bottom: 10px; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.step { border-top: 2px solid var(--gold); padding-top: 20px; }
+.step .k { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 10px; }
+.step h3 { font-size: 23px; margin-bottom: 8px; color: var(--green); }
 .step p { font-size: 15px; color: var(--ink-soft); }
-.step .k { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--clay); display: block; margin-bottom: 12px; }
 
-/* ---------- Quote band ---------- */
-.quote { background: var(--ink); color: var(--cream); text-align: center; }
+/* ---------- Quote ---------- */
+.quote { background: var(--green); color: var(--cream); text-align: center; }
 .quote blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(26px, 4vw, 42px); max-width: 26ch; margin: 0 auto; line-height: 1.35; }
-.quote cite { display: block; margin-top: 26px; font-family: 'Jost', sans-serif; font-style: normal; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--taupe); }
+.quote cite { display: block; margin-top: 24px; font-style: normal; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-soft); }
 
 /* ---------- Contact ---------- */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
-.contact-info p { color: var(--ink-soft); margin-bottom: 26px; max-width: 44ch; }
-.contact-line { display: block; text-decoration: none; font-size: 18px; padding: 16px 0; border-bottom: 1px solid var(--line); transition: color .2s; }
-.contact-line:hover { color: var(--clay-deep); }
-.contact-line small { display: block; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--clay); margin-bottom: 4px; }
-.form label { display: block; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ink-soft); margin: 22px 0 8px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.contact-info > p { color: var(--ink-soft); margin-bottom: 24px; max-width: 44ch; }
+.contact-line { display: block; text-decoration: none; font-size: 18px; padding: 15px 0; border-bottom: 1px solid var(--line); transition: color .2s; }
+.contact-line:hover { color: var(--gold); }
+.contact-line small { display: block; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+.form label { display: block; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ink-soft); margin: 20px 0 8px; }
 .form label:first-child { margin-top: 0; }
-.form input, .form select, .form textarea { width: 100%; border: none; border-bottom: 1px solid var(--taupe); background: transparent; padding: 10px 2px; font-family: 'Jost', sans-serif; font-size: 17px; color: var(--ink); }
-.form input:focus, .form select:focus, .form textarea:focus { outline: none; border-bottom-color: var(--clay-deep); }
+.form input, .form select, .form textarea { width: 100%; border: none; border-bottom: 1px solid var(--gold-soft); background: transparent; padding: 10px 2px; font-family: 'Jost', sans-serif; font-size: 17px; color: var(--ink); }
+.form input:focus, .form select:focus, .form textarea:focus { outline: none; border-bottom-color: var(--green); }
 .form textarea { resize: vertical; min-height: 90px; }
-.form .btn { margin-top: 34px; cursor: pointer; font-family: 'Jost', sans-serif; background: var(--ink); color: var(--cream); border: 1px solid var(--ink); }
-.form .btn:hover { background: var(--clay-deep); border-color: var(--clay-deep); }
+.form .btn { margin-top: 32px; background: var(--green); color: var(--cream); border-color: var(--green); }
+.form .btn:hover { background: var(--green-soft); border-color: var(--green-soft); }
 
 /* ---------- Footer ---------- */
-footer { border-top: 1px solid var(--line); padding: 44px 24px; }
+footer { background: var(--green); padding: 44px 24px; color: #cfc9b8; }
 .foot-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-.foot-inner p { font-size: 13px; color: var(--ink-soft); letter-spacing: 1px; }
-.foot-inner a { text-decoration: none; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--clay-deep); }
+.foot-inner p { font-size: 13px; letter-spacing: 1px; }
+.foot-inner .script { font-size: 26px; color: var(--gold-soft); }
+.foot-inner a { text-decoration: none; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold-soft); }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 920px) {
-  .svc-grid, .work-grid { grid-template-columns: repeat(2, 1fr); }
-  .steps { grid-template-columns: repeat(2, 1fr); gap: 36px; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 44px; }
-  .portrait { max-width: 420px; }
+@media (max-width: 940px) {
+  .hero-inner, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-photo img { height: 380px; }
+  .svc-grid, .art-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); gap: 34px; }
+  .about-photo { max-width: 460px; }
 }
-@media (max-width: 640px) {
-  section { padding: 72px 20px; }
-  .svc-grid, .work-grid { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr; }
+@media (max-width: 620px) {
+  section { padding: 70px 20px; }
+  .svc-grid, .work-grid, .art-grid, .steps { grid-template-columns: 1fr; }
   .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--line); flex-direction: column; gap: 0; padding: 10px 0; }
   .nav-links.open { display: flex; }
   .nav-links li { padding: 12px 24px; }
@@ -145,13 +162,19 @@ footer { border-top: 1px solid var(--line); padding: 44px 24px; }
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="wordmark" href="#top">Aviva <em>Interior Design</em></a>
+    <a class="wordmark" href="#top">
+      <span class="badge">A</span>
+      <span class="wm-text">
+        <span class="wm-name">Aviva Interior Design</span><br>
+        <span class="wm-tag">where your vision becomes our passion</span>
+      </span>
+    </a>
     <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#process">Process</a></li>
+      <li><a href="#work">Portfolio</a></li>
+      <li><a href="#artisan">Custom Touches</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -159,27 +182,32 @@ footer { border-top: 1px solid var(--line); padding: 44px 24px; }
 
 <header class="hero" id="top">
   <div class="hero-inner">
-    <p class="eyebrow">Interior Designer &amp; Corporate Stylist</p>
-    <h1>Spaces that feel <em>collected,</em> calm, and unmistakably yours.</h1>
-    <p>From warm, layered homes to polished corporate environments, Aviva designs interiors that work beautifully for the people who live and work in them.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-solid" href="#contact">Book a Consultation</a>
-      <a class="btn btn-ghost" href="#work">View the Work</a>
+    <div>
+      <p class="eyebrow">Interior Designer &amp; Corporate Stylist — New Jersey</p>
+      <h1><span class="script">Where your vision</span> becomes our passion.</h1>
+      <p class="lede">From warm, welcoming homes to polished corporate spaces, Aviva Interior Design creates rooms that reflect the people who live and work in them — layered, personal, and beautifully finished.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#contact">Book a Consultation</a>
+        <a class="btn btn-ghost" href="#work">View the Portfolio</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <figure><img src="images/kitchen-island.jpg" alt="Minimalist kitchen with quartz island and sculptural glass pendant lighting, designed by Aviva Interior Design"></figure>
     </div>
   </div>
 </header>
 
 <section class="about" id="about">
   <div class="shell about-grid">
-    <figure class="portrait">
-      <!-- PLACEHOLDER: replace with a portrait or signature project photo -->
-      <span>Portrait / signature project photo goes here</span>
-    </figure>
+    <div class="about-photo">
+      <img src="images/florals-dried.jpg" alt="Dried floral arrangement in a green glass vase, styled by Aviva from her own garden">
+    </div>
     <div class="about-copy">
-      <h2>Design that begins with <em>how you live</em></h2>
-      <p>Aviva is an interior designer and corporate stylist who believes great rooms are built around real life — the morning light you love, the way guests gather, the pace of a workday. Every project starts by listening.</p>
-      <p>Her work blends timeless foundations with layered texture, natural materials, and moments of personality, whether the canvas is a family home, an executive office, or a client-facing corporate space.</p>
-      <p class="sig">— Aviva</p>
+      <p class="eyebrow" style="color: var(--gold);">Meet Aviva</p>
+      <h2>The best interior designer is <em>nature</em> — and rooms should feel just as alive.</h2>
+      <p>Aviva is a New Jersey&ndash;based interior designer and corporate stylist with a simple belief: your home should put the &ldquo;U&rdquo; in &ldquo;HOUSE.&rdquo; Her spaces showcase your personal treasures and collections, layer warm color and texture, and always leave room for a touch of the garden.</p>
+      <p>Beyond full design projects, she brings a maker&rsquo;s hand that most firms can&rsquo;t — hand-dried florals grown in her own garden, custom-painted furniture transformations, and styled tablescapes that turn a dinner into an occasion.</p>
+      <p class="sig">Aviva</p>
     </div>
   </div>
 </section>
@@ -187,41 +215,53 @@ footer { border-top: 1px solid var(--line); padding: 44px 24px; }
 <section id="services">
   <div class="shell">
     <div class="sec-head">
-      <h2>Services</h2>
-      <p>Three ways to work together — from full-scope residential design to styling that elevates the spaces where business happens.</p>
+      <p class="kicker">Services</p>
+      <h2>Four ways to work <em>together</em></h2>
+      <p>Whether it&rsquo;s a single room, a whole home, or the office your clients see first — every project starts with your vision.</p>
     </div>
     <div class="svc-grid">
       <div class="svc">
         <span class="num">01</span>
-        <h3>Residential Interior Design</h3>
-        <p>Full-service design for renovations, new builds, and refreshes — concept through installation.</p>
+        <h3>Residential Design</h3>
+        <p>Full-service design for renovations, refreshes, and new spaces — concept through installation.</p>
         <ul>
           <li>Space planning &amp; layouts</li>
-          <li>Furniture, finishes &amp; lighting</li>
-          <li>Custom millwork &amp; window treatments</li>
-          <li>Full project management</li>
+          <li>Color &amp; material palettes</li>
+          <li>Furniture &amp; lighting selection</li>
+          <li>Kitchens, baths &amp; living spaces</li>
         </ul>
       </div>
       <div class="svc">
         <span class="num">02</span>
         <h3>Corporate Styling</h3>
-        <p>Offices, lobbies, and client-facing spaces styled to reflect your brand and support your team.</p>
+        <p>Offices and client-facing spaces styled to reflect your brand and welcome your people.</p>
         <ul>
-          <li>Office &amp; executive suite styling</li>
-          <li>Reception &amp; lobby design</li>
-          <li>Brand-aligned art &amp; accessories</li>
-          <li>Event &amp; photo-ready staging</li>
+          <li>Office &amp; executive suites</li>
+          <li>Reception &amp; lobby styling</li>
+          <li>Brand-aligned art &amp; decor</li>
+          <li>Photo- &amp; event-ready staging</li>
         </ul>
       </div>
       <div class="svc">
         <span class="num">03</span>
-        <h3>Design Consultations</h3>
-        <p>Focused, expert guidance when you need direction — perfect for smaller projects and refreshes.</p>
+        <h3>Custom &amp; Handmade</h3>
+        <p>One-of-a-kind finishing touches, made by hand — the details you can&rsquo;t buy off the shelf.</p>
         <ul>
-          <li>In-home or virtual sessions</li>
-          <li>Color &amp; material selections</li>
-          <li>Shopping lists &amp; sourcing</li>
-          <li>Room refresh road maps</li>
+          <li>Dried florals from the garden</li>
+          <li>Framed botanical letter art</li>
+          <li>Painted furniture transformations</li>
+          <li>Vignettes &amp; collection styling</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <span class="num">04</span>
+        <h3>Event &amp; Table Styling</h3>
+        <p>Holiday tables and gatherings styled down to the place card — memorable before the first course.</p>
+        <ul>
+          <li>Holiday &amp; dinner tablescapes</li>
+          <li>Fresh &amp; dried centerpieces</li>
+          <li>Vintage &amp; heirloom styling</li>
+          <li>Seasonal home refreshes</li>
         </ul>
       </div>
     </div>
@@ -231,17 +271,35 @@ footer { border-top: 1px solid var(--line); padding: 44px 24px; }
 <section class="work" id="work">
   <div class="shell">
     <div class="sec-head">
-      <h2>Selected <em>Work</em></h2>
-      <p>A glimpse of recent projects. Follow along on Instagram for the full portfolio and behind-the-scenes process.</p>
+      <p class="kicker">Portfolio</p>
+      <h2>Selected <em>work</em></h2>
+      <p>Projects and design concepts — follow along on Instagram for the full story behind each space.</p>
     </div>
     <div class="work-grid">
-      <!-- PLACEHOLDERS: swap each tile's background for a project photo -->
-      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener"><figcaption>Living Room — Warm Modern</figcaption></a>
-      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener"><figcaption>Executive Office Suite</figcaption></a>
-      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener"><figcaption>Kitchen &amp; Dining</figcaption></a>
-      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener"><figcaption>Corporate Lobby</figcaption></a>
-      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener"><figcaption>Primary Bedroom</figcaption></a>
-      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener"><figcaption>Conference &amp; Client Space</figcaption></a>
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/fireplace-mosaic.jpg" alt="Cozy corner with shimmering mosaic tile fireplace wall, framed landscape art, and glass globe chandelier">
+        <figcaption>Cozy Corner — Fireplace &amp; Art</figcaption>
+      </a>
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/bathroom.jpg" alt="Minimalist bathroom with sculptural pedestal sink and marbled feature wall">
+        <figcaption>Serene Minimalist Bath</figcaption>
+      </a>
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/entry-chair.jpg" alt="Entry seating vignette with cream chair, teal velvet pillow, and vintage green lamp">
+        <figcaption>Welcoming Entry Vignette</figcaption>
+      </a>
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/dining-dramatic.jpg" alt="Dramatic dining room with charcoal walls, gold textured mirror, marble table and brass pendants">
+        <figcaption>Dramatic Dining Concept</figcaption>
+      </a>
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/sofa-gallery.jpg" alt="Teal sectional sofa beneath a curated gallery wall of watercolors and vintage prints">
+        <figcaption>Teal Moment &amp; Gallery Wall</figcaption>
+      </a>
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/living-mocha.jpg" alt="Warm mocha living room with velvet sofa, travertine fireplace and round brass mirror">
+        <figcaption>Warm Mocha Living Room</figcaption>
+      </a>
     </div>
     <div class="work-cta">
       <a class="btn btn-ghost" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">See More on Instagram</a>
@@ -249,39 +307,67 @@ footer { border-top: 1px solid var(--line); padding: 44px 24px; }
   </div>
 </section>
 
+<section class="artisan" id="artisan">
+  <div class="shell">
+    <div class="sec-head">
+      <p class="kicker">The Custom Touches</p>
+      <h2>Made by <em>hand</em>, grown in the garden</h2>
+      <p>The details that make a space unmistakably yours — florals dried from Aviva&rsquo;s own garden, botanical art, and furniture given a second life.</p>
+    </div>
+    <div class="art-grid">
+      <figure>
+        <img src="images/floral-letter.jpg" alt="Framed monogram letter artwork made of dried flowers on black background">
+        <figcaption>Botanical Letter Art</figcaption>
+      </figure>
+      <figure>
+        <img src="images/chair-painted.jpg" alt="Chair transformed with painted fabric using a leathering technique in rich paisley red">
+        <figcaption>Furniture Transformations</figcaption>
+      </figure>
+      <figure>
+        <img src="images/tablescape.jpg" alt="Thanksgiving tablescape with vintage floral linens, milk glass candlesticks and garden centerpieces">
+        <figcaption>Holiday Tablescapes</figcaption>
+      </figure>
+      <figure>
+        <img src="images/milkglass.jpg" alt="Curated milk glass collection styled on wooden shelves with floral arrangement">
+        <figcaption>Collections &amp; Vignettes</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <section id="process">
   <div class="shell">
     <div class="sec-head">
-      <h2>The <em>Process</em></h2>
-      <p>Clear, collaborative, and designed to make the experience as beautiful as the result.</p>
+      <p class="kicker">The Process</p>
+      <h2>Clear, collaborative, <em>creative</em></h2>
     </div>
     <div class="steps">
       <div class="step">
         <span class="k">Step One</span>
         <h3>Discover</h3>
-        <p>We meet, walk the space, and talk about how you live or work, your style, timeline, and budget.</p>
+        <p>We meet, walk the space, and talk about how you live or work — your style, timeline, and budget.</p>
       </div>
       <div class="step">
         <span class="k">Step Two</span>
         <h3>Design</h3>
-        <p>Concepts, palettes, layouts, and selections come together into a cohesive vision for your space.</p>
+        <p>Concepts, color stories, and layouts come together into a cohesive vision for your space.</p>
       </div>
       <div class="step">
         <span class="k">Step Three</span>
         <h3>Curate</h3>
-        <p>Every piece is sourced and ordered — furniture, lighting, art, and the details that make it yours.</p>
+        <p>Every piece is sourced or handmade — furniture, lighting, art, florals, and the details in between.</p>
       </div>
       <div class="step">
         <span class="k">Step Four</span>
         <h3>Reveal</h3>
-        <p>Installation day: the space is styled down to the last stem, ready for you to simply enjoy it.</p>
+        <p>Installation day: the space is styled down to the last stem, ready for you to simply enjoy.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="quote">
-  <blockquote>&ldquo;A well-designed space doesn&rsquo;t just look beautiful — it changes how you feel every day inside it.&rdquo;
+  <blockquote>&ldquo;Showcase your personal treasures and collections. It puts the &lsquo;U&rsquo; in &lsquo;HOUSE.&rsquo;&rdquo;
     <cite>Aviva — Founder &amp; Principal Designer</cite>
   </blockquote>
 </section>
@@ -289,14 +375,15 @@ footer { border-top: 1px solid var(--line); padding: 44px 24px; }
 <section id="contact">
   <div class="shell contact-grid">
     <div class="contact-info">
-      <div class="sec-head" style="margin-bottom:28px;">
-        <h2>Let&rsquo;s create <em>something beautiful</em></h2>
+      <div class="sec-head" style="margin-bottom:26px;">
+        <p class="kicker">Contact</p>
+        <h2>Let&rsquo;s create something <em>beautiful</em></h2>
       </div>
-      <p>Whether it&rsquo;s a single room, a whole home, or the office your clients see first — start with a conversation.</p>
-      <!-- PLACEHOLDERS: update email, phone, and service area -->
+      <p>Based in New Jersey, working with clients locally and virtually. Whether it&rsquo;s one room, a whole home, or the office your clients see first — start with a conversation.</p>
+      <!-- PLACEHOLDER: confirm real inquiry email before launch -->
       <a class="contact-line" href="mailto:hello@avivainteriordesign.com"><small>Email</small>hello@avivainteriordesign.com</a>
       <a class="contact-line" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener"><small>Instagram</small>@avivainteriordesign</a>
-      <span class="contact-line"><small>Service Area</small>Serving clients locally &amp; virtually</span>
+      <span class="contact-line"><small>Studio</small>New Jersey, USA — serving clients locally &amp; virtually</span>
     </div>
     <form class="form" onsubmit="return sendInquiry(event)">
       <label for="fName">Name</label>
@@ -308,7 +395,7 @@ footer { border-top: 1px solid var(--line); padding: 44px 24px; }
         <option>Residential — Full Design</option>
         <option>Residential — Single Room / Refresh</option>
         <option>Corporate Styling</option>
-        <option>Design Consultation</option>
+        <option>Custom Florals / Furniture / Table Styling</option>
         <option>Other</option>
       </select>
       <label for="fMsg">Tell me about your project</label>
@@ -320,7 +407,8 @@ footer { border-top: 1px solid var(--line); padding: 44px 24px; }
 
 <footer>
   <div class="foot-inner">
-    <p>&copy; <span id="year"></span> Aviva Interior Design. All rights reserved.</p>
+    <span class="script">Aviva</span>
+    <p>&copy; <span id="year"></span> Aviva Interior Design &middot; New Jersey, USA</p>
     <a href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">Instagram</a>
   </div>
 </footer>
