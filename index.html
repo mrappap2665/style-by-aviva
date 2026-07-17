@@ -1,429 +1,429 @@
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brady Electric - Daily Field Report</title>
+<title>Aviva Interior Design — Interior Designer &amp; Corporate Stylist | New Jersey</title>
+<meta name="description" content="Aviva Interior Design — New Jersey interior designer and corporate stylist. Residential design, corporate styling, custom florals, and one-of-a-kind finishing touches. Where your vision becomes our passion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+:root {
+  --green: #1e3527;
+  --green-soft: #2c4a37;
+  --cream: #faf7f0;
+  --sand: #f0ead9;
+  --gold: #b9975b;
+  --gold-soft: #d3bc8d;
+  --ink: #26251f;
+  --ink-soft: #5d594e;
+  --line: #e2dbc9;
+}
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, sans-serif; background: #f4f6f9; color: #1a2744; min-height: 100vh; }
-.header { background: #1a2744; padding: 14px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-bottom: 3px solid #f0a500; }
-.header-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-.company-name { font-size: 20px; font-weight: 700; color: #ffffff; letter-spacing: 1px; }
-.company-name span { color: #f0a500; }
-.form-title { font-size: 11px; color: #ffc94d; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
-.header-badge { background: #f0a500; color: #1a2744; font-weight: 700; font-size: 11px; padding: 4px 10px; border-radius: 4px; }
-.main { max-width: 680px; margin: 0 auto; padding: 16px 16px 120px; }
-.section { background: #ffffff; border-radius: 8px; margin-bottom: 12px; border: 1px solid #d0d8e4; overflow: hidden; }
-.section-header { background: #1a2744; padding: 10px 16px; display: flex; align-items: center; gap: 8px; }
-.section-header.alt { background: #3d5068; }
-.section-num { background: #f0a500; color: #1a2744; font-weight: 700; font-size: 13px; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.section-title { font-weight: 700; font-size: 14px; color: #ffffff; text-transform: uppercase; letter-spacing: 0.5px; }
-.section-body { padding: 14px 16px; }
-.field-label { display: block; font-size: 11px; font-weight: 700; color: #6b7c93; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 5px; margin-top: 12px; }
-.field-label:first-child { margin-top: 0; }
-.req { color: #c0392b; margin-left: 2px; }
-input[type="text"], input[type="date"], input[type="email"], input[type="number"], select, textarea { width: 100%; padding: 10px 12px; border: 1.5px solid #d0d8e4; border-radius: 6px; font-family: Arial, sans-serif; font-size: 15px; color: #1a2744; background: #f0f4fa; -webkit-appearance: none; }
-input:focus, select:focus, textarea:focus { outline: none; border-color: #f0a500; background: #ffffff; }
-textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
-.row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.field-note { font-size: 12px; color: #6b7c93; margin-top: 4px; font-style: italic; }
-.weather-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
-.weather-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1.5px solid #d0d8e4; border-radius: 6px; background: #f4f6f9; cursor: pointer; }
-.weather-item input[type="checkbox"] { width: 20px; height: 20px; min-width: 20px; cursor: pointer; border: none; background: none; padding: 0; }
-.weather-item label { font-size: 15px; font-weight: 600; color: #1a2744; cursor: pointer; text-transform: none; letter-spacing: 0; margin: 0; }
-.crew-table { width: 100%; border-collapse: collapse; }
-.crew-table th { font-size: 11px; font-weight: 700; color: #6b7c93; text-transform: uppercase; letter-spacing: 0.6px; padding: 6px 8px; text-align: left; border-bottom: 2px solid #d0d8e4; background: #f4f6f9; }
-.crew-table td { padding: 4px 4px; border-bottom: 1px solid #d0d8e4; }
-.crew-table tr:last-child td { border-bottom: none; }
-.crew-table input, .crew-table select { border: 1.5px solid #d0d8e4; border-radius: 5px; padding: 8px; font-size: 14px; width: 100%; background: #f0f4fa; }
-.add-btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; background: none; border: 1.5px dashed #f0a500; color: #f0a500; font-family: Arial, sans-serif; font-weight: 700; font-size: 13px; padding: 7px 14px; border-radius: 6px; cursor: pointer; }
-.remove-btn { background: none; border: none; color: #c0392b; font-size: 20px; cursor: pointer; padding: 4px 8px; line-height: 1; }
-.scope-toggle { display: flex; gap: 8px; margin-bottom: 10px; }
-.toggle-btn { flex: 1; padding: 10px; border: 2px solid #d0d8e4; background: #ffffff; border-radius: 6px; font-family: Arial, sans-serif; font-weight: 700; font-size: 14px; color: #6b7c93; cursor: pointer; text-align: center; }
-.toggle-btn.active-yes { border-color: #c0392b; background: #fff0ee; color: #c0392b; }
-.toggle-btn.active-no { border-color: #27ae60; background: #ebf7f0; color: #27ae60; }
-.scope-fields { display: none; }
-.scope-fields.visible { display: block; }
-.warn-note { font-size: 12px; color: #c0392b; margin-top: 6px; font-style: italic; }
-.divider { height: 1px; background: #d0d8e4; margin: 14px 0; }
-.submit-area { position: fixed; bottom: 0; left: 0; right: 0; background: #ffffff; border-top: 2px solid #d0d8e4; padding: 12px 16px; z-index: 100; }
-.submit-inner { max-width: 680px; margin: 0 auto; display: flex; gap: 10px; align-items: flex-end; }
-.email-wrap { flex: 1; }
-.email-wrap .field-label { margin-top: 0; }
-.send-btn { background: #f0a500; color: #1a2744; border: none; border-radius: 8px; padding: 14px 20px; font-family: Arial, sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
-.copy-btn { background: #3d5068; color: #ffffff; border: none; border-radius: 8px; padding: 14px 14px; font-size: 16px; cursor: pointer; flex-shrink: 0; }
-.copy-hint { display: none; font-size: 12px; color: #27ae60; font-weight: 700; text-align: center; padding: 6px 0 0; max-width: 680px; margin: 0 auto; }
-.copy-hint.show { display: block; }
-.toast { display: none; position: fixed; top: 80px; left: 50%; transform: translateX(-50%); background: #1a2744; color: #ffffff; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 14px; z-index: 999; box-shadow: 0 4px 20px rgba(0,0,0,0.3); text-align: center; max-width: 90vw; }
-.toast.show { display: block; }
-@media (max-width: 480px) { .row-2 { grid-template-columns: 1fr; } .submit-inner { flex-wrap: wrap; } .email-wrap { width: 100%; flex: none; } .send-btn { flex: 1; } }
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; font-weight: 300; background: var(--cream); color: var(--ink); line-height: 1.7; font-size: 17px; }
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.15; }
+.script { font-family: 'Great Vibes', 'Cormorant Garamond', serif; font-weight: 400; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* ---------- Nav ---------- */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(250,247,240,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.nav-inner { max-width: 1180px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; }
+.wordmark { text-decoration: none; display: flex; align-items: center; gap: 12px; }
+.wordmark .badge { width: 46px; height: 46px; border-radius: 50%; background: var(--green); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'Great Vibes', cursive; font-size: 26px; padding-top: 2px; flex-shrink: 0; }
+.wordmark .wm-text { line-height: 1.2; }
+.wordmark .wm-name { font-family: 'Cormorant Garamond', serif; font-size: 19px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--green); }
+.wordmark .wm-tag { font-size: 10px; letter-spacing: 1.6px; color: var(--gold); font-style: italic; }
+.nav-links { display: flex; gap: 30px; list-style: none; }
+.nav-links a { text-decoration: none; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ink-soft); transition: color .2s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-toggle { display: none; background: none; border: none; font-size: 26px; color: var(--green); cursor: pointer; line-height: 1; }
+
+/* ---------- Hero ---------- */
+.hero { background: var(--green); color: var(--cream); padding: 150px 24px 0; }
+.hero-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+.eyebrow { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 20px; }
+.hero h1 { font-size: clamp(40px, 6.2vw, 76px); max-width: 14ch; }
+.hero h1 .script { display: block; font-size: clamp(52px, 7.5vw, 96px); color: var(--gold-soft); margin-bottom: 4px; }
+.hero p.lede { max-width: 46ch; margin-top: 24px; font-size: 19px; color: #e8e2d2; }
+.hero-ctas { margin: 38px 0 56px; display: flex; gap: 16px; flex-wrap: wrap; }
+.btn { display: inline-block; text-decoration: none; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; padding: 16px 32px; border: 1px solid var(--gold); transition: all .25s; cursor: pointer; font-family: 'Jost', sans-serif; }
+.btn-gold { background: var(--gold); color: var(--green); }
+.btn-gold:hover { background: var(--gold-soft); border-color: var(--gold-soft); }
+.btn-ghost { color: var(--cream); border-color: rgba(250,247,240,.5); background: none; }
+.btn-ghost:hover { background: var(--cream); color: var(--green); }
+.hero-photo { align-self: end; }
+.hero-photo figure { margin: 0; border: 1px solid rgba(211,188,141,.4); border-bottom: none; padding: 14px 14px 0; }
+.hero-photo img { width: 100%; height: 520px; object-fit: cover; object-position: center; }
+
+/* ---------- Shared ---------- */
+section { padding: 100px 24px; }
+.shell { max-width: 1180px; margin: 0 auto; }
+.sec-head { margin-bottom: 54px; }
+.sec-head .kicker { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.sec-head h2 { font-size: clamp(32px, 4.5vw, 52px); color: var(--green); }
+.sec-head h2 em { font-style: italic; }
+.sec-head p { color: var(--ink-soft); max-width: 60ch; margin-top: 14px; }
+
+/* ---------- About ---------- */
+.about { background: var(--sand); }
+.about-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 60px; align-items: center; }
+.about-photo { position: relative; }
+.about-photo img { width: 100%; aspect-ratio: 4/4.6; object-fit: cover; }
+.about-photo::after { content: ""; position: absolute; inset: 14px; border: 1px solid rgba(250,247,240,.65); pointer-events: none; }
+.about-copy h2 { font-size: clamp(30px, 4vw, 46px); color: var(--green); margin-bottom: 20px; }
+.about-copy h2 em { font-style: italic; }
+.about-copy p { color: var(--ink-soft); margin-bottom: 16px; }
+.about-copy .sig { font-family: 'Great Vibes', cursive; font-size: 40px; color: var(--gold); margin-top: 14px; }
+
+/* ---------- Services ---------- */
+.svc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.svc { border: 1px solid var(--line); background: #fff; padding: 38px 28px; transition: transform .25s, box-shadow .25s; }
+.svc:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(30,53,39,.1); }
+.svc .num { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: var(--gold); }
+.svc h3 { font-size: 24px; margin: 12px 0; color: var(--green); }
+.svc p { color: var(--ink-soft); font-size: 15px; }
+.svc ul { list-style: none; margin-top: 16px; }
+.svc li { font-size: 13.5px; color: var(--ink-soft); padding: 7px 0; border-top: 1px solid var(--line); letter-spacing: .4px; }
+
+/* ---------- Portfolio ---------- */
+.work { background: var(--green); }
+.work .sec-head h2 { color: var(--cream); }
+.work .sec-head p { color: #cfc9b8; }
+.work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.tile { position: relative; overflow: hidden; text-decoration: none; display: block; }
+.tile img { width: 100%; aspect-ratio: 4/4.4; object-fit: cover; transition: transform .5s; }
+.tile:hover img { transform: scale(1.04); }
+.tile figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 44px 18px 14px; background: linear-gradient(transparent, rgba(30,53,39,.82)); color: var(--cream); font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; }
+.work-cta { text-align: center; margin-top: 44px; }
+
+/* ---------- Artisan ---------- */
+.artisan { background: var(--sand); }
+.art-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.art-grid figure { margin: 0; background: #fff; border: 1px solid var(--line); padding: 12px 12px 16px; }
+.art-grid img { width: 100%; aspect-ratio: 4/4.6; object-fit: cover; }
+.art-grid figcaption { font-size: 12.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-soft); margin-top: 12px; text-align: center; }
+
+/* ---------- Process ---------- */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.step { border-top: 2px solid var(--gold); padding-top: 20px; }
+.step .k { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 10px; }
+.step h3 { font-size: 23px; margin-bottom: 8px; color: var(--green); }
+.step p { font-size: 15px; color: var(--ink-soft); }
+
+/* ---------- Quote ---------- */
+.quote { background: var(--green); color: var(--cream); text-align: center; }
+.quote blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(26px, 4vw, 42px); max-width: 26ch; margin: 0 auto; line-height: 1.35; }
+.quote cite { display: block; margin-top: 24px; font-style: normal; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-soft); }
+
+/* ---------- Contact ---------- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.contact-info > p { color: var(--ink-soft); margin-bottom: 24px; max-width: 44ch; }
+.contact-line { display: block; text-decoration: none; font-size: 18px; padding: 15px 0; border-bottom: 1px solid var(--line); transition: color .2s; }
+.contact-line:hover { color: var(--gold); }
+.contact-line small { display: block; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+.form label { display: block; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ink-soft); margin: 20px 0 8px; }
+.form label:first-child { margin-top: 0; }
+.form input, .form select, .form textarea { width: 100%; border: none; border-bottom: 1px solid var(--gold-soft); background: transparent; padding: 10px 2px; font-family: 'Jost', sans-serif; font-size: 17px; color: var(--ink); }
+.form input:focus, .form select:focus, .form textarea:focus { outline: none; border-bottom-color: var(--green); }
+.form textarea { resize: vertical; min-height: 90px; }
+.form .btn { margin-top: 32px; background: var(--green); color: var(--cream); border-color: var(--green); }
+.form .btn:hover { background: var(--green-soft); border-color: var(--green-soft); }
+
+/* ---------- Footer ---------- */
+footer { background: var(--green); padding: 44px 24px; color: #cfc9b8; }
+.foot-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.foot-inner p { font-size: 13px; letter-spacing: 1px; }
+.foot-inner .script { font-size: 26px; color: var(--gold-soft); }
+.foot-inner a { text-decoration: none; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold-soft); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 940px) {
+  .hero-inner, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-photo img { height: 380px; }
+  .svc-grid, .art-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); gap: 34px; }
+  .about-photo { max-width: 460px; }
+}
+@media (max-width: 620px) {
+  section { padding: 70px 20px; }
+  .svc-grid, .work-grid, .art-grid, .steps { grid-template-columns: 1fr; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--line); flex-direction: column; gap: 0; padding: 10px 0; }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 12px 24px; }
+  .nav-toggle { display: block; }
+}
 </style>
 </head>
 <body>
-<div class="header">
-  <div class="header-inner">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="wordmark" href="#top">
+      <span class="badge">A</span>
+      <span class="wm-text">
+        <span class="wm-name">Aviva Interior Design</span><br>
+        <span class="wm-tag">where your vision becomes our passion</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Portfolio</a></li>
+      <li><a href="#artisan">Custom Touches</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
     <div>
-      <div class="company-name">BRADY <span>ELECTRIC</span></div>
-      <div class="form-title">Daily Field Report</div>
-    </div>
-    <div class="header-badge">DFR</div>
-  </div>
-</div>
-<div class="main">
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">1</div>
-      <div class="section-title">Job Information</div>
-    </div>
-    <div class="section-body">
-      <div class="row-2">
-        <div>
-          <span class="field-label">Job Name <span class="req">*</span></span>
-          <input type="text" id="jobName" placeholder="e.g. Riverside Plaza">
-        </div>
-        <div>
-          <span class="field-label">Job Number <span class="req">*</span></span>
-          <input type="text" id="jobNumber" placeholder="e.g. 2024-047">
-        </div>
+      <p class="eyebrow">Interior Designer &amp; Corporate Stylist — New Jersey</p>
+      <h1><span class="script">Where your vision</span> becomes our passion.</h1>
+      <p class="lede">From warm, welcoming homes to polished corporate spaces, Aviva Interior Design creates rooms that reflect the people who live and work in them — layered, personal, and beautifully finished.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#contact">Book a Consultation</a>
+        <a class="btn btn-ghost" href="#work">View the Portfolio</a>
       </div>
-      <div class="row-2">
-        <div>
-          <span class="field-label">Date <span class="req">*</span></span>
-          <input type="date" id="reportDate">
-        </div>
-        <div>
-          <span class="field-label">Foreman Name <span class="req">*</span></span>
-          <input type="text" id="foremanName" placeholder="Your name">
-        </div>
+    </div>
+    <div class="hero-photo">
+      <figure><img src="images/kitchen-island.jpg" alt="Minimalist kitchen with quartz island and sculptural glass pendant lighting, designed by Aviva Interior Design"></figure>
+    </div>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <div class="shell about-grid">
+    <div class="about-photo">
+      <img src="images/florals-dried.jpg" alt="Dried floral arrangement in a green glass vase, styled by Aviva from her own garden">
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow" style="color: var(--gold);">Meet Aviva</p>
+      <h2>The best interior designer is <em>nature</em> — and rooms should feel just as alive.</h2>
+      <p>Aviva is a New Jersey&ndash;based interior designer and corporate stylist with a simple belief: your home should put the &ldquo;U&rdquo; in &ldquo;HOUSE.&rdquo; Her spaces showcase your personal treasures and collections, layer warm color and texture, and always leave room for a touch of the garden.</p>
+      <p>Beyond full design projects, she brings a maker&rsquo;s hand that most firms can&rsquo;t — hand-dried florals grown in her own garden, custom-painted furniture transformations, and styled tablescapes that turn a dinner into an occasion.</p>
+      <p class="sig">Aviva</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="shell">
+    <div class="sec-head">
+      <p class="kicker">Services</p>
+      <h2>Four ways to work <em>together</em></h2>
+      <p>Whether it&rsquo;s a single room, a whole home, or the office your clients see first — every project starts with your vision.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <span class="num">01</span>
+        <h3>Residential Design</h3>
+        <p>Full-service design for renovations, refreshes, and new spaces — concept through installation.</p>
+        <ul>
+          <li>Space planning &amp; layouts</li>
+          <li>Color &amp; material palettes</li>
+          <li>Furniture &amp; lighting selection</li>
+          <li>Kitchens, baths &amp; living spaces</li>
+        </ul>
       </div>
-      <span class="field-label">Weather Conditions</span>
-      <div class="weather-grid">
-        <div class="weather-item">
-          <input type="checkbox" id="wClear">
-          <label for="wClear">Clear</label>
-        </div>
-        <div class="weather-item">
-          <input type="checkbox" id="wCloudy">
-          <label for="wCloudy">Cloudy</label>
-        </div>
-        <div class="weather-item">
-          <input type="checkbox" id="wRain">
-          <label for="wRain">Rain</label>
-        </div>
-        <div class="weather-item">
-          <input type="checkbox" id="wSnow">
-          <label for="wSnow">Snow / Ice</label>
-        </div>
-        <div class="weather-item">
-          <input type="checkbox" id="wWind">
-          <label for="wWind">High Wind</label>
-        </div>
-        <div class="weather-item">
-          <input type="checkbox" id="wCold">
-          <label for="wCold">Extreme Cold</label>
-        </div>
-        <div class="weather-item">
-          <input type="checkbox" id="wHeat">
-          <label for="wHeat">Extreme Heat</label>
-        </div>
+      <div class="svc">
+        <span class="num">02</span>
+        <h3>Corporate Styling</h3>
+        <p>Offices and client-facing spaces styled to reflect your brand and welcome your people.</p>
+        <ul>
+          <li>Office &amp; executive suites</li>
+          <li>Reception &amp; lobby styling</li>
+          <li>Brand-aligned art &amp; decor</li>
+          <li>Photo- &amp; event-ready staging</li>
+        </ul>
       </div>
-      <span class="field-label" style="margin-top:12px;">Weather Notes</span>
-      <input type="text" id="weatherNotes" placeholder="e.g. Rained 10am-1pm, crew moved indoors">
-    </div>
-  </div>
-  <div class="section">
-    <div class="section-header alt">
-      <div class="section-num">2</div>
-      <div class="section-title">Crew &amp; Hours Worked</div>
-    </div>
-    <div class="section-body">
-      <p class="field-note" style="margin-bottom:10px;">List each person individually. Hours calculate automatically from start and end time.</p>
-      <table class="crew-table">
-        <thead>
-          <tr>
-            <th style="width:28%">Name</th>
-            <th style="width:20%">Role</th>
-            <th style="width:16%">Start</th>
-            <th style="width:16%">End</th>
-            <th style="width:12%">Total</th>
-            <th style="width:8%"></th>
-          </tr>
-        </thead>
-        <tbody id="crewBody">
-          <tr>
-            <td><input type="text" placeholder="Full name"></td>
-            <td><select><option value="">Role</option><option>Foreman</option><option>Journeyman</option><option>Apprentice</option><option>Helper</option><option>Master Electrician</option></select></td>
-            <td><input type="time" step="900" onchange="calcHours(this)"></td>
-            <td><input type="time" step="900" onchange="calcHours(this)"></td>
-            <td><input type="text" class="hours-total" placeholder="0h" readonly style="background:#e8edf5;font-weight:700;text-align:center;"></td>
-            <td><button class="remove-btn" onclick="removeRow(this)">x</button></td>
-          </tr>
-          <tr>
-            <td><input type="text" placeholder="Full name"></td>
-            <td><select><option value="">Role</option><option>Foreman</option><option>Journeyman</option><option>Apprentice</option><option>Helper</option><option>Master Electrician</option></select></td>
-            <td><input type="time" step="900" onchange="calcHours(this)"></td>
-            <td><input type="time" step="900" onchange="calcHours(this)"></td>
-            <td><input type="text" class="hours-total" placeholder="0h" readonly style="background:#e8edf5;font-weight:700;text-align:center;"></td>
-            <td><button class="remove-btn" onclick="removeRow(this)">x</button></td>
-          </tr>
-        </tbody>
-      </table>
-      <button class="add-btn" onclick="addCrewRow()">+ Add Crew Member</button>
-    </div>
-  </div>
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">3</div>
-      <div class="section-title">Work Completed Today</div>
-    </div>
-    <div class="section-body">
-      <span class="field-label">Describe work completed <span class="req">*</span></span>
-      <textarea id="workCompleted" placeholder="Be specific. e.g. Rough-in on 2nd floor east wing rooms 201-206, pulled service entrance wire, installed 40 boxes." rows="4"></textarea>
-      <span class="field-label" style="margin-top:14px;">Work Planned for Tomorrow</span>
-      <textarea id="workTomorrow" placeholder="e.g. Continue rough-in rooms 207-212, confirm panel location with GC." rows="3"></textarea>
-    </div>
-  </div>
-  <div class="section">
-    <div class="section-header alt">
-      <div class="section-num">4</div>
-      <div class="section-title">Materials</div>
-    </div>
-    <div class="section-body">
-      <span class="field-label">Materials Used Today</span>
-      <p class="field-note">Anything pulled from job site box, van stock, or supply house delivery.</p>
-      <textarea id="materialsUsed" placeholder="e.g. 200ft 12/2 Romex, 40 single-gang boxes, 1 box wire nuts" rows="3"></textarea>
-      <div class="divider"></div>
-      <span class="field-label">Materials Needed / To Be Ordered</span>
-      <p class="field-note">What needs to be ordered before next shift?</p>
-      <textarea id="materialsNeeded" placeholder="e.g. Need 100A panel, 4 breakers - required by Thursday AM." rows="3"></textarea>
-    </div>
-  </div>
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">5</div>
-      <div class="section-title">Scope Changes / Extra Work</div>
-    </div>
-    <div class="section-body">
-      <span class="field-label">Any scope changes, verbal directives, or extra work today?</span>
-      <div class="scope-toggle">
-        <button class="toggle-btn" id="scopeYes" onclick="setScope(true)">YES - Document It</button>
-        <button class="toggle-btn" id="scopeNo" onclick="setScope(false)">No Changes</button>
+      <div class="svc">
+        <span class="num">03</span>
+        <h3>Custom &amp; Handmade</h3>
+        <p>One-of-a-kind finishing touches, made by hand — the details you can&rsquo;t buy off the shelf.</p>
+        <ul>
+          <li>Dried florals from the garden</li>
+          <li>Framed botanical letter art</li>
+          <li>Painted furniture transformations</li>
+          <li>Vignettes &amp; collection styling</li>
+        </ul>
       </div>
-      <div class="scope-fields" id="scopeFields">
-        <span class="field-label">Who gave the directive?</span>
-        <input type="text" id="scopeWho" placeholder="Name and title (e.g. Dave M., GC superintendent)">
-        <span class="field-label" style="margin-top:10px;">Verbal or written?</span>
-        <select id="scopeType"><option value="">Select</option><option>Verbal only</option><option>Written (email/text)</option><option>Formal change order</option></select>
-        <span class="field-label" style="margin-top:10px;">Describe the extra work</span>
-        <textarea id="scopeDesc" placeholder="What was added or changed? Be specific." rows="3"></textarea>
-        <p class="warn-note">Verbal directives must be followed up with a written change order. Flag for office immediately.</p>
+      <div class="svc">
+        <span class="num">04</span>
+        <h3>Event &amp; Table Styling</h3>
+        <p>Holiday tables and gatherings styled down to the place card — memorable before the first course.</p>
+        <ul>
+          <li>Holiday &amp; dinner tablescapes</li>
+          <li>Fresh &amp; dried centerpieces</li>
+          <li>Vintage &amp; heirloom styling</li>
+          <li>Seasonal home refreshes</li>
+        </ul>
       </div>
     </div>
   </div>
-  <div class="section">
-    <div class="section-header alt">
-      <div class="section-num">6</div>
-      <div class="section-title">Issues, Delays &amp; RFIs</div>
+</section>
+
+<section class="work" id="work">
+  <div class="shell">
+    <div class="sec-head">
+      <p class="kicker">Portfolio</p>
+      <h2>Selected <em>work</em></h2>
+      <p>Projects and design concepts — follow along on Instagram for the full story behind each space.</p>
     </div>
-    <div class="section-body">
-      <span class="field-label">Delays, conflicts, access issues, or RFI needs?</span>
-      <textarea id="issues" placeholder="e.g. No access to mechanical room until 1pm - lost 3 hrs. RFI needed on panel location." rows="3"></textarea>
-      <div class="divider"></div>
-      <span class="field-label">Subcontractor Coordination Notes</span>
-      <textarea id="subNotes" placeholder="e.g. HVAC crew in conflict with our rough-in path." rows="3"></textarea>
+    <div class="work-grid">
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/fireplace-mosaic.jpg" alt="Cozy corner with shimmering mosaic tile fireplace wall, framed landscape art, and glass globe chandelier">
+        <figcaption>Cozy Corner — Fireplace &amp; Art</figcaption>
+      </a>
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/bathroom.jpg" alt="Minimalist bathroom with sculptural pedestal sink and marbled feature wall">
+        <figcaption>Serene Minimalist Bath</figcaption>
+      </a>
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/entry-chair.jpg" alt="Entry seating vignette with cream chair, teal velvet pillow, and vintage green lamp">
+        <figcaption>Welcoming Entry Vignette</figcaption>
+      </a>
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/dining-dramatic.jpg" alt="Dramatic dining room with charcoal walls, gold textured mirror, marble table and brass pendants">
+        <figcaption>Dramatic Dining Concept</figcaption>
+      </a>
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/sofa-gallery.jpg" alt="Teal sectional sofa beneath a curated gallery wall of watercolors and vintage prints">
+        <figcaption>Teal Moment &amp; Gallery Wall</figcaption>
+      </a>
+      <a class="tile" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">
+        <img src="images/living-mocha.jpg" alt="Warm mocha living room with velvet sofa, travertine fireplace and round brass mirror">
+        <figcaption>Warm Mocha Living Room</figcaption>
+      </a>
+    </div>
+    <div class="work-cta">
+      <a class="btn btn-ghost" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">See More on Instagram</a>
     </div>
   </div>
-  <div class="section">
-    <div class="section-header">
-      <div class="section-num">7</div>
-      <div class="section-title">Additional Notes</div>
+</section>
+
+<section class="artisan" id="artisan">
+  <div class="shell">
+    <div class="sec-head">
+      <p class="kicker">The Custom Touches</p>
+      <h2>Made by <em>hand</em>, grown in the garden</h2>
+      <p>The details that make a space unmistakably yours — florals dried from Aviva&rsquo;s own garden, botanical art, and furniture given a second life.</p>
     </div>
-    <div class="section-body">
-      <span class="field-label">Anything else the office should know?</span>
-      <textarea id="additionalNotes" placeholder="Safety incidents, equipment issues, inspector visits, etc." rows="3"></textarea>
+    <div class="art-grid">
+      <figure>
+        <img src="images/floral-letter.jpg" alt="Framed monogram letter artwork made of dried flowers on black background">
+        <figcaption>Botanical Letter Art</figcaption>
+      </figure>
+      <figure>
+        <img src="images/chair-painted.jpg" alt="Chair transformed with painted fabric using a leathering technique in rich paisley red">
+        <figcaption>Furniture Transformations</figcaption>
+      </figure>
+      <figure>
+        <img src="images/tablescape.jpg" alt="Thanksgiving tablescape with vintage floral linens, milk glass candlesticks and garden centerpieces">
+        <figcaption>Holiday Tablescapes</figcaption>
+      </figure>
+      <figure>
+        <img src="images/milkglass.jpg" alt="Curated milk glass collection styled on wooden shelves with floral arrangement">
+        <figcaption>Collections &amp; Vignettes</figcaption>
+      </figure>
     </div>
   </div>
-</div>
-<div class="submit-area">
-  <div class="submit-inner">
-    <div class="email-wrap">
-      <span class="field-label">Send report to</span>
-      <input type="text" id="recipientEmail" value="shannonb@bradyelectric.com" placeholder="Separate multiple addresses with a comma">
+</section>
+
+<section id="process">
+  <div class="shell">
+    <div class="sec-head">
+      <p class="kicker">The Process</p>
+      <h2>Clear, collaborative, <em>creative</em></h2>
     </div>
-    <button class="copy-btn" onclick="copyReport()" title="Copy to clipboard">Copy</button>
-    <button class="send-btn" onclick="submitReport()">Send Report</button>
+    <div class="steps">
+      <div class="step">
+        <span class="k">Step One</span>
+        <h3>Discover</h3>
+        <p>We meet, walk the space, and talk about how you live or work — your style, timeline, and budget.</p>
+      </div>
+      <div class="step">
+        <span class="k">Step Two</span>
+        <h3>Design</h3>
+        <p>Concepts, color stories, and layouts come together into a cohesive vision for your space.</p>
+      </div>
+      <div class="step">
+        <span class="k">Step Three</span>
+        <h3>Curate</h3>
+        <p>Every piece is sourced or handmade — furniture, lighting, art, florals, and the details in between.</p>
+      </div>
+      <div class="step">
+        <span class="k">Step Four</span>
+        <h3>Reveal</h3>
+        <p>Installation day: the space is styled down to the last stem, ready for you to simply enjoy.</p>
+      </div>
+    </div>
   </div>
-  <div class="copy-hint" id="copyHint">Copied! Open your email app, paste, and send.</div>
-</div>
-<div class="toast" id="toast"></div>
+</section>
+
+<section class="quote">
+  <blockquote>&ldquo;Showcase your personal treasures and collections. It puts the &lsquo;U&rsquo; in &lsquo;HOUSE.&rsquo;&rdquo;
+    <cite>Aviva — Founder &amp; Principal Designer</cite>
+  </blockquote>
+</section>
+
+<section id="contact">
+  <div class="shell contact-grid">
+    <div class="contact-info">
+      <div class="sec-head" style="margin-bottom:26px;">
+        <p class="kicker">Contact</p>
+        <h2>Let&rsquo;s create something <em>beautiful</em></h2>
+      </div>
+      <p>Based in New Jersey, working with clients locally and virtually. Whether it&rsquo;s one room, a whole home, or the office your clients see first — start with a conversation.</p>
+      <a class="contact-line" href="mailto:Avivadecor519@gmail.com"><small>Email</small>Avivadecor519@gmail.com</a>
+      <a class="contact-line" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener"><small>Instagram</small>@avivainteriordesign</a>
+      <span class="contact-line"><small>Studio</small>New Jersey, USA — serving clients locally &amp; virtually</span>
+    </div>
+    <form class="form" onsubmit="return sendInquiry(event)">
+      <label for="fName">Name</label>
+      <input type="text" id="fName" required placeholder="Your name">
+      <label for="fEmail">Email</label>
+      <input type="email" id="fEmail" required placeholder="you@email.com">
+      <label for="fType">Project Type</label>
+      <select id="fType">
+        <option>Residential — Full Design</option>
+        <option>Residential — Single Room / Refresh</option>
+        <option>Corporate Styling</option>
+        <option>Custom Florals / Furniture / Table Styling</option>
+        <option>Other</option>
+      </select>
+      <label for="fMsg">Tell me about your project</label>
+      <textarea id="fMsg" placeholder="The space, your goals, and your ideal timeline…"></textarea>
+      <button class="btn" type="submit">Send Inquiry</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <span class="script">Aviva</span>
+    <p>&copy; <span id="year"></span> Aviva Interior Design &middot; New Jersey, USA</p>
+    <a href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</footer>
+
 <script>
-document.getElementById('reportDate').valueAsDate = new Date();
-
-function getWeather() {
-  var items = [['wClear','Clear'],['wCloudy','Cloudy'],['wRain','Rain'],['wSnow','Snow/Ice'],['wWind','High Wind'],['wCold','Extreme Cold'],['wHeat','Extreme Heat']];
-  var selected = [];
-  for (var i = 0; i < items.length; i++) {
-    if (document.getElementById(items[i][0]).checked) selected.push(items[i][1]);
-  }
-  return selected.length ? selected.join(', ') : 'Not specified';
-}
-
-function setScope(yes) {
-  var yBtn = document.getElementById('scopeYes');
-  var nBtn = document.getElementById('scopeNo');
-  var fields = document.getElementById('scopeFields');
-  if (yes) {
-    yBtn.className = 'toggle-btn active-yes';
-    nBtn.className = 'toggle-btn';
-    fields.className = 'scope-fields visible';
-  } else {
-    nBtn.className = 'toggle-btn active-no';
-    yBtn.className = 'toggle-btn';
-    fields.className = 'scope-fields';
-  }
-}
-
-function calcHours(input) {
-  var row = input.closest('tr');
-  var times = row.querySelectorAll('input[type="time"]');
-  var totalEl = row.querySelector('.hours-total');
-  if (!times[0].value || !times[1].value) { totalEl.value = ''; return; }
-  var start = times[0].value.split(':').map(Number);
-  var end   = times[1].value.split(':').map(Number);
-  var startMins = start[0] * 60 + start[1];
-  var endMins   = end[0]   * 60 + end[1];
-  if (endMins <= startMins) { totalEl.value = 'Check times'; return; }
-  var diff = endMins - startMins;
-  var hrs  = Math.floor(diff / 60);
-  var mins = diff % 60;
-  totalEl.value = mins > 0 ? hrs + 'h ' + mins + 'm' : hrs + 'h';
-}
-
-function addCrewRow() {
-  var tbody = document.getElementById('crewBody');
-  var row = document.createElement('tr');
-  row.innerHTML = '<td><input type="text" placeholder="Full name"></td>' +
-    '<td><select><option value="">Role</option><option>Foreman</option><option>Journeyman</option><option>Apprentice</option><option>Helper</option><option>Master Electrician</option></select></td>' +
-    '<td><input type="time" step="900" onchange="calcHours(this)"></td>' +
-    '<td><input type="time" step="900" onchange="calcHours(this)"></td>' +
-    '<td><input type="text" class="hours-total" placeholder="0h" readonly style="background:#e8edf5;font-weight:700;text-align:center;"></td>' +
-    '<td><button class="remove-btn" onclick="removeRow(this)">x</button></td>';
-  tbody.appendChild(row);
-}
-
-function removeRow(btn) {
-  var tbody = document.getElementById('crewBody');
-  if (tbody.rows.length > 1) { btn.closest('tr').remove(); }
-  else { showToast('Need at least one crew member.'); }
-}
-
-function getCrew() {
-  var rows = document.querySelectorAll('#crewBody tr');
-  var crew = [];
-  var totalMins = 0;
-  for (var i = 0; i < rows.length; i++) {
-    var name  = rows[i].cells[0].querySelector('input').value.trim();
-    var role  = rows[i].cells[1].querySelector('select').value;
-    var start = rows[i].cells[2].querySelector('input').value;
-    var end   = rows[i].cells[3].querySelector('input').value;
-    var tot   = rows[i].cells[4].querySelector('input').value;
-    if (name) {
-      var timeStr = (start && end) ? start + ' - ' + end : '--';
-      crew.push('  ' + name + ' | ' + (role || 'N/A') + ' | ' + timeStr + ' | ' + (tot || '--'));
-      // add to total
-      if (start && end) {
-        var sm = parseInt(start.split(':')[0])*60 + parseInt(start.split(':')[1]);
-        var em = parseInt(end.split(':')[0])*60   + parseInt(end.split(':')[1]);
-        if (em > sm) totalMins += (em - sm);
-      }
-    }
-  }
-  var totalHrs  = Math.floor(totalMins / 60);
-  var totalMnts = totalMins % 60;
-  var totalStr  = totalMnts > 0 ? totalHrs + 'h ' + totalMnts + 'm' : totalHrs + 'h';
-  return { lines: crew, total: totalStr };
-}
-
-function getVal(id) { return document.getElementById(id).value.trim() || '--'; }
-
-function validate() {
-  var required = [{id:'jobName',label:'Job Name'},{id:'jobNumber',label:'Job Number'},{id:'reportDate',label:'Date'},{id:'foremanName',label:'Foreman Name'},{id:'workCompleted',label:'Work Completed Today'}];
-  for (var i = 0; i < required.length; i++) {
-    var el = document.getElementById(required[i].id);
-    if (!el.value.trim()) { el.focus(); el.scrollIntoView({behavior:'smooth',block:'center'}); showToast('Required: ' + required[i].label); return false; }
-  }
-  if (getCrew().lines.length === 0) { showToast('Add at least one crew member.'); return false; }
-  return true;
-}
-
-function buildReport() {
-  var crew = getCrew();
-  var scopeVisible = document.getElementById('scopeFields').className.indexOf('visible') > -1;
-  var scopeSection = scopeVisible ? 'YES - Extra Work Documented\r\n  Who: ' + getVal('scopeWho') + '\r\n  Type: ' + (document.getElementById('scopeType').value || '--') + '\r\n  Details: ' + getVal('scopeDesc') : 'No scope changes today';
-  var date = new Date(document.getElementById('reportDate').value + 'T12:00:00');
-  var dateStr = date.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
-  var L = '--------------------------------------------------';
-  var lines = [
-    'BRADY ELECTRIC - DAILY FIELD REPORT', L, '',
-    'JOB NAME:    ' + getVal('jobName'),
-    'JOB NUMBER:  ' + getVal('jobNumber'),
-    'DATE:        ' + dateStr,
-    'FOREMAN:     ' + getVal('foremanName'),
-    'WEATHER:     ' + getWeather()
-  ];
-  if (getVal('weatherNotes') !== '--') lines.push('WEATHER NOTES: ' + getVal('weatherNotes'));
-  lines = lines.concat(['', L, 'CREW AND HOURS  (Total: ' + crew.total + ')', L]);
-  lines = lines.concat(crew.lines);
-  lines = lines.concat([
-    '', L, 'WORK COMPLETED TODAY', L, getVal('workCompleted'),
-    '', 'WORK PLANNED FOR TOMORROW:', getVal('workTomorrow'),
-    '', L, 'MATERIALS USED TODAY', L, getVal('materialsUsed'),
-    '', 'MATERIALS NEEDED / TO BE ORDERED:', getVal('materialsNeeded'),
-    '', L, 'SCOPE CHANGES / EXTRA WORK', L, scopeSection,
-    '', L, 'ISSUES, DELAYS AND RFIs', L, getVal('issues'),
-    '', 'SUBCONTRACTOR NOTES:', getVal('subNotes'),
-    '', L, 'ADDITIONAL NOTES', L, getVal('additionalNotes'),
-    '', L, 'Submitted via Brady Electric DFR - ' + new Date().toLocaleString(), L
-  ]);
-  return lines.join('\r\n');
-}
-
-function submitReport() {
-  if (!validate()) return;
-  var rawRecipient = document.getElementById('recipientEmail').value.trim() || 'shannonb@bradyelectric.com';
-  // Clean up multiple addresses — split by comma or semicolon, trim, rejoin with comma
-  var addresses = rawRecipient.split(/[,;]+/).map(function(a){ return a.trim(); }).filter(function(a){ return a.length > 0; });
-  var recipient = addresses.join(',');
-  var jobName = document.getElementById('jobName').value.trim();
-  var date = document.getElementById('reportDate').value;
-  var foreman = document.getElementById('foremanName').value.trim();
-  var subject = encodeURIComponent('DFR - ' + jobName + ' - ' + date + ' - ' + foreman);
-  var body = encodeURIComponent(buildReport());
-  window.location.href = 'mailto:' + recipient + '?subject=' + subject + '&body=' + body;
-  showToast('Opening email app...', 3000);
-}
-
-function copyReport() {
-  if (!validate()) return;
-  var jobName = document.getElementById('jobName').value.trim();
-  var date = document.getElementById('reportDate').value;
-  var foreman = document.getElementById('foremanName').value.trim();
-  var subject = 'DFR - ' + jobName + ' - ' + date + ' - ' + foreman;
-  var full = 'Subject: ' + subject + '\n\n' + buildReport().replace(/\r\n/g, '\n');
-  navigator.clipboard.writeText(full).then(function() {
-    var hint = document.getElementById('copyHint');
-    hint.className = 'copy-hint show';
-    setTimeout(function(){ hint.className = 'copy-hint'; }, 6000);
-  }).catch(function() { showToast('Could not copy. Use Send Report instead.'); });
-}
-
-function showToast(msg, duration) {
-  var t = document.getElementById('toast');
-  t.textContent = msg;
-  t.className = 'toast show';
-  setTimeout(function(){ t.className = 'toast'; }, duration || 3000);
+document.getElementById('year').textContent = new Date().getFullYear();
+function sendInquiry(e) {
+  e.preventDefault();
+  var name = document.getElementById('fName').value.trim();
+  var email = document.getElementById('fEmail').value.trim();
+  var type = document.getElementById('fType').value;
+  var msg = document.getElementById('fMsg').value.trim();
+  var subject = encodeURIComponent('Design Inquiry — ' + name + ' (' + type + ')');
+  var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nProject Type: ' + type + '\n\n' + msg);
+  window.location.href = 'mailto:Avivadecor519@gmail.com?subject=' + subject + '&body=' + body;
+  return false;
 }
 </script>
 </body>
