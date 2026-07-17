@@ -114,9 +114,22 @@ section { padding: 100px 24px; }
 .step p { font-size: 15px; color: var(--ink-soft); }
 
 /* ---------- Quote ---------- */
-.quote { background: var(--green); color: var(--cream); text-align: center; }
-.quote blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(26px, 4vw, 42px); max-width: 26ch; margin: 0 auto; line-height: 1.35; }
+.quote { background: #22211d; color: var(--cream); }
+.quote-grid { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: center; }
+.quote-grid img { width: 100%; max-width: 380px; }
+.quote blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(26px, 4vw, 42px); max-width: 26ch; line-height: 1.35; }
 .quote cite { display: block; margin-top: 24px; font-style: normal; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-soft); }
+
+/* ---------- Testimonials ---------- */
+.testi { background: var(--sand); }
+.testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.t-card { background: #fff; border: 1px solid var(--line); padding: 40px 36px; position: relative; }
+.t-card.wide { grid-column: 1 / -1; }
+.t-card::before { content: "\201C"; font-family: 'Cormorant Garamond', serif; font-size: 76px; line-height: 1; color: var(--gold-soft); position: absolute; top: 22px; left: 30px; }
+.t-card p { color: var(--ink-soft); font-size: 16px; margin-top: 26px; }
+.t-card p + p { margin-top: 14px; }
+.t-card .t-who { margin-top: 22px; font-size: 12.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--green); }
+.t-card .t-who small { display: block; letter-spacing: 1.5px; color: var(--gold); text-transform: none; font-size: 13px; margin-top: 3px; }
 
 /* ---------- Contact ---------- */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
@@ -141,7 +154,9 @@ footer { background: var(--green); padding: 44px 24px; color: #cfc9b8; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 940px) {
-  .hero-inner, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-inner, .about-grid, .contact-grid, .quote-grid, .testi-grid { grid-template-columns: 1fr; }
+  .quote-grid img { max-width: 280px; margin: 0 auto; }
+  .quote blockquote { text-align: center; margin: 0 auto; }
   .hero-photo img { height: 380px; }
   .svc-grid, .art-grid { grid-template-columns: repeat(2, 1fr); }
   .work-grid { grid-template-columns: repeat(2, 1fr); }
@@ -175,6 +190,7 @@ footer { background: var(--green); padding: 44px 24px; color: #cfc9b8; }
       <li><a href="#services">Services</a></li>
       <li><a href="#work">Portfolio</a></li>
       <li><a href="#artisan">Custom Touches</a></li>
+      <li><a href="#testimonials">Kind Words</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -200,7 +216,7 @@ footer { background: var(--green); padding: 44px 24px; color: #cfc9b8; }
 <section class="about" id="about">
   <div class="shell about-grid">
     <div class="about-photo">
-      <img src="images/florals-dried.jpg" alt="Dried floral arrangement in a green glass vase, styled by Aviva from her own garden">
+      <img src="images/aviva-portrait.jpg" alt="Reading in a quiet, warmly styled corner — knit sweater, wooden side table, and textured rug">
     </div>
     <div class="about-copy">
       <p class="eyebrow" style="color: var(--gold);">Meet Aviva</p>
@@ -367,9 +383,37 @@ footer { background: var(--green); padding: 44px 24px; color: #cfc9b8; }
 </section>
 
 <section class="quote">
-  <blockquote>&ldquo;Showcase your personal treasures and collections. It puts the &lsquo;U&rsquo; in &lsquo;HOUSE.&rsquo;&rdquo;
-    <cite>Aviva — Founder &amp; Principal Designer</cite>
-  </blockquote>
+  <div class="quote-grid">
+    <img src="images/brand-sketch.jpg" alt="Line illustration of an armchair beside an arched window with a potted plant">
+    <blockquote>&ldquo;Showcase your personal treasures and collections. It puts the &lsquo;U&rsquo; in &lsquo;HOUSE.&rsquo;&rdquo;
+      <cite>Aviva — Founder &amp; Principal Designer</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="testi" id="testimonials">
+  <div class="shell">
+    <div class="sec-head">
+      <p class="kicker">Kind Words</p>
+      <h2>What clients <em>say</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="t-card">
+        <p>Aviva decorated two of my homes. Her sense of space and colour is remarkable. She just has to have one look at your space and she can show you samples that are spot on in terms of size and colour. She is good at observing your own taste and style and doesn&rsquo;t waste time showing you things you won&rsquo;t like. She has a talent to put a room together beautifully within your budget and works quickly.</p>
+        <div class="t-who">Lisa Z<small>New York, NY</small></div>
+      </div>
+      <div class="t-card">
+        <p>I have used Aviva for all my design needs for many years. I love the way she is able to help me create my own style and figure out the look that reflects my taste. Aviva makes the process a pleasure and stress free. I wouldn&rsquo;t trust anyone else!</p>
+        <div class="t-who">Rhonda K<small>Teaneck, NJ</small></div>
+      </div>
+      <div class="t-card wide">
+        <p>I have had the pleasure of having Aviva be my decorator and designer for the past 18 years. Aviva is a pleasure to work with because she is smart, creative, hardworking and cares about you as her client &mdash; and she puts her whole heart into making your project meet every one of your expectations.</p>
+        <p>I met Aviva when I was looking for a decorator/designer for my new living room. I interviewed over a dozen decorators but I chose Aviva &mdash; and I am beyond thrilled with this decision. The living room was a large project with a lot of complexities. Aviva was sensitive to my style choices and also to my budget and time frame. The living room turned out to be stunning &mdash; and then Aviva decorated my dining room. I receive, to this day, compliments from friends and family about the elegance and design choices in this large and often-used dining area. Over the course of the last 18 years, Aviva essentially has helped me redo, redesign and re-engineer almost every room in my home.</p>
+        <p>The last project that Aviva completed with me was my kitchen. When designing this kitchen, Aviva made some brave decorating decisions and helped me see &ldquo;out of the box&rdquo; so that the kitchen is elegant, functional and aesthetically beautiful &mdash; and friends who visit still comment on how much they love it. I am grateful to Aviva for her ability to visualize and work within a client&rsquo;s needs and framework to create a design outcome that is functional and beautiful. Thank you, Aviva.</p>
+        <div class="t-who">Norma Brecker Blum<small>Paramus, NJ</small></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
@@ -383,6 +427,7 @@ footer { background: var(--green); padding: 44px 24px; color: #cfc9b8; }
       <a class="contact-line" href="mailto:Avivadecor519@gmail.com"><small>Email</small>Avivadecor519@gmail.com</a>
       <a class="contact-line" href="https://www.instagram.com/avivainteriordesign" target="_blank" rel="noopener"><small>Instagram</small>@avivainteriordesign</a>
       <span class="contact-line"><small>Studio</small>New Jersey, USA — serving clients locally &amp; virtually</span>
+      <img src="images/brand-card.jpg" alt="Style By Aviva — stylist and interior designer" style="max-width: 340px; margin-top: 34px; border: 1px solid var(--line);">
     </div>
     <form class="form" onsubmit="return sendInquiry(event)">
       <label for="fName">Name</label>
