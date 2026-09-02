@@ -107,6 +107,11 @@ section { padding: 100px 24px; }
 .art-grid img { width: 100%; aspect-ratio: 4/4.6; object-fit: cover; }
 .art-grid figcaption { font-size: 12.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-soft); margin-top: 12px; text-align: center; }
 
+/* ---------- Commercial shoot ---------- */
+.shoot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.shoot-grid img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+.shoot-note { margin-top: 26px; font-size: 14px; color: var(--ink-soft); letter-spacing: .4px; font-style: italic; }
+
 /* ---------- Process ---------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
 .step { border-top: 2px solid var(--gold); padding-top: 20px; }
@@ -169,7 +174,7 @@ footer { background: var(--green); padding: 44px 24px; color: #cfc9b8; }
 }
 @media (max-width: 620px) {
   section { padding: 70px 20px; }
-  .svc-grid, .work-grid, .art-grid, .steps { grid-template-columns: 1fr; }
+  .svc-grid, .work-grid, .art-grid, .steps, .shoot-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--line); flex-direction: column; gap: 0; padding: 10px 0; }
   .nav-links.open { display: flex; }
   .nav-links li { padding: 12px 24px; }
@@ -349,6 +354,23 @@ footer { background: var(--green); padding: 44px 24px; color: #cfc9b8; }
         <figcaption>Collections &amp; Vignettes</figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<section id="commercial">
+  <div class="shell">
+    <div class="sec-head">
+      <p class="kicker">Commercial &amp; Editorial</p>
+      <h2>Styling for the <em>camera</em></h2>
+      <p>Prop and product styling for brands and photo shoots — including campaign imagery created for one of the largest candle makers in the United States.</p>
+    </div>
+    <div class="shoot-grid">
+      <img src="images/shoot-candles-morning.jpg" alt="Product styling: mauve and plum pillar candles on a rustic wood pedestal with dried lavender, a croissant, and vintage ceramics">
+      <img src="images/shoot-candles-tapers.jpg" alt="Product styling: amber taper candles in brass candlesticks with dried florals against dark wood paneling">
+      <img src="images/shoot-candles-tablescape.jpg" alt="Product styling: white taper and pillar candles styled into a gold-accented dinner tablescape with roses">
+      <img src="images/shoot-candles-citrus.jpg" alt="Product styling: textured plum pillar candles on whitewashed pedestals with citrus, parsley, and sage table settings">
+    </div>
+    <p class="shoot-note">Photography from a commercial styling shoot; every prop, surface, and arrangement styled by Aviva.</p>
   </div>
 </section>
 
